@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARTERN RP - San Andreas Multiplayer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050505;
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+        .font-heading { font-family: 'Montserrat', sans-serif; }
+        
+        .neon-text {
+            text-shadow: 0 0 10px rgba(255, 0, 122, 0.7), 0 0 20px rgba(255, 0, 122, 0.5);
+        }
+        
+        .neon-border {
+            border: 1px solid rgba(255, 0, 122, 0.3);
+            box-shadow: 0 0 15px rgba(255, 0, 122, 0.1);
+        }
+
+        .neon-button {
+            background: #FF007A;
+            box-shadow: 0 0 15px rgba(255, 0, 122, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .neon-button:hover {
+            box-shadow: 0 0 25px rgba(255, 0, 122, 0.7);
+            transform: translateY(-2px);
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .bg-hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(5,5,5,1)), url('https://images.unsplash.com/photo-1514565131-fce0801e5785?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .feature-card:hover {
+            border-color: #FF007A;
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass py-4 px-6 md:px-20 flex justify-between items-center">
+        <div class="text-2xl font-black font-heading tracking-tighter">
+            JARTERN<span class="text-[#FF007A]">RP</span>
+        </div>
+        <div class="hidden md:flex space-x-8 font-semibold text-sm uppercase tracking-widest">
+            <a href="#home" class="hover:text-[#FF007A] transition">Home</a>
+            <a href="#about" class="hover:text-[#FF007A] transition">Tentang</a>
+            <a href="#features" class="hover:text-[#FF007A] transition">Fitur</a>
+            <a href="#join" class="hover:text-[#FF007A] transition">Cara Join</a>
+        </div>
+        <a href="#join" class="neon-button px-6 py-2 rounded-full font-bold text-sm">MAIN SEKARANG</a>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <section id="home" class="bg-hero min-h-screen flex items-center justify-center text-center px-4">
+        <div data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="text-6xl md:text-8xl font-black font-heading mb-4 neon-text">JARTERN ROLEPLAY</h1>
+            <p class="text-lg md:text-2xl text-gray-300 max-w-2xl mx-auto mb-8 font-light">
+                Rasakan Roleplay Paling <span class="text-white font-bold italic">Realistis</span> di San Andreas Multiplayer.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#" class="neon-button px-10 py-4 rounded-lg font-bold flex items-center justify-center">
+                    <i class="fas fa-play mr-2"></i> Join Server
+                </a>
+                <a href="#" class="bg-white/10 hover:bg-white/20 backdrop-blur-md px-10 py-4 rounded-lg font-bold border border-white/20 transition flex items-center justify-center">
+                    <i class="fab fa-discord mr-2 text-blue-400"></i> Discord Community
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Tentang Server -->
+    <section id="about" class="py-20 px-6 md:px-20 bg-[#050505]">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <h2 class="text-4xl font-black font-heading mb-6 border-l-8 border-[#FF007A] pl-6 uppercase">Mengapa JARTERN RP?</h2>
+                <p class="text-gray-400 leading-relaxed text-lg mb-6">
+                    JARTERN RP adalah komunitas San Andreas Multiplayer yang berfokus pada kualitas roleplay yang mendalam dan ekonomi yang seimbang. Kami menyediakan platform bagi pemain yang mencari pengalaman simulasi kehidupan nyata di Los Santos.
+                </p>
+                <ul class="space-y-4">
+                    <li class="flex items-center text-white font-semibold">
+                        <i class="fas fa-check-circle text-[#FF007A] mr-3"></i> Roleplay Serius & Realistis
+                    </li>
+                    <li class="flex items-center text-white font-semibold">
+                        <i class="fas fa-check-circle text-[#FF007A] mr-3"></i> Admin Aktif & Profesional 24/7
+                    </li>
+                    <li class="flex items-center text-white font-semibold">
+                        <i class="fas fa-check-circle text-[#FF007A] mr-3"></i> Komunitas Ramah & Solid
+                    </li>
+                </ul>
+            </div>
+            <div class="relative" data-aos="fade-left">
+                <div class="absolute -inset-4 bg-[#FF007A] opacity-20 blur-xl rounded-full"></div>
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="SAMP" class="relative rounded-2xl border border-white/10 shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Fitur Unggulan -->
+    <section id="features" class="py-20 px-6 md:px-20 bg-[#0A0A0A]">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-black font-heading uppercase mb-2">Fitur Unggulan</h2>
+            <div class="h-1 w-20 bg-[#FF007A] mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feature Cards -->
+            <div class="glass p-8 rounded-2xl feature-card transition-all duration-300 border border-white/5" data-aos="zoom-in">
+                <i class="fas fa-shield-alt text-4xl text-[#FF007A] mb-6"></i>
+                <h3 class="text-xl font-bold mb-3">Police & Law System</h3>
+                <p class="text-sm text-gray-400">Sistem hukum yang kompleks dengan departemen kepolisian yang terorganisir.</p>
+            </div>
+            <div class="glass p-8 rounded-2xl feature-card transition-all duration-300 border border-white/5" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fas fa-heartbeat text-4xl text-[#FF007A] mb-6"></i>
+                <h3 class="text-xl font-bold mb-3">Medical & Emergency</h3>
+                <p class="text-sm text-gray-400">Tim medis sigap dengan sistem injury yang detail dan realistis.</p>
+            </div>
+            <div class="glass p-8 rounded-2xl feature-card transition-all duration-300 border border-white/5" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fas fa-briefcase text-4xl text-[#FF007A] mb-6"></i>
+                <h3 class="text-xl font-bold mb-3">Job & Business</h3>
+                <p class="text-sm text-gray-400">Bekerja sebagai kurir, supir bus, atau bangun perusahaan impianmu sendiri.</p>
+            </div>
+            <div class="glass p-8 rounded-2xl feature-card transition-all duration-300 border border-white/5" data-aos="zoom-in">
+                <i class="fas fa-home text-4xl text-[#FF007A] mb-6"></i>
+                <h3 class="text-xl font-bold mb-3">Property & Housing</h3>
+                <p class="text-sm text-gray-400">Beli rumah, apartemen, atau gudang dengan sistem furnitur kustom.</p>
+            </div>
+            <div class="glass p-8 rounded-2xl feature-card transition-all duration-300 border border-white/5" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fas fa-car text-4xl text-[#FF007A] mb-6"></i>
+                <h3 class="text-xl font-bold mb-3">Custom Vehicle</h3>
+                <p class="text-sm text-gray-400">Modifikasi kendaraanmu dengan sistem tuning dan handling yang unik.</p>
+            </div>
+            <div class="glass p-8 rounded-2xl feature-card transition-all duration-300 border border-white/5" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fas fa-user-shield text-4xl text-[#FF007A] mb-6"></i>
+                <h3 class="text-xl font-bold mb-3">Anti-Cheat & Fair Play</h3>
+                <p class="text-sm text-gray-400">Sistem keamanan terbaru untuk menjaga kenyamanan bermain tanpa cheater.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Statistik Server -->
+    <section class="py-16 bg-[#FF007A]">
+        <div class="px-6 md:px-20 grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+            <div data-aos="fade-up">
+                <div class="text-4xl font-black font-heading">150+</div>
+                <div class="text-sm uppercase tracking-tighter opacity-80 font-bold">Player Online</div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100">
+                <div class="text-4xl font-black font-heading">5,000+</div>
+                <div class="text-sm uppercase tracking-tighter opacity-80 font-bold">Registered Player</div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <div class="text-4xl font-black font-heading">12</div>
+                <div class="text-sm uppercase tracking-tighter opacity-80 font-bold">Total Factions</div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300">
+                <div class="text-4xl font-black font-heading">99.9%</div>
+                <div class="text-sm uppercase tracking-tighter opacity-80 font-bold">Uptime Server</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Cara Bergabung -->
+    <section id="join" class="py-20 px-6 md:px-20">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-black font-heading uppercase mb-2">Cara Bergabung</h2>
+            <p class="text-gray-400">Ikuti langkah sederhana berikut untuk mulai bermain</p>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-6">
+            <div class="p-6 text-center" data-aos="fade-up">
+                <div class="w-16 h-16 bg-white/5 border border-white/10 rounded-full flex items-center justify-center mx-auto mb-6 text-[#FF007A] text-2xl font-bold">1</div>
+                <h4 class="font-bold mb-2">Download GTA SA</h4>
+                <p class="text-sm text-gray-400">Pastikan kamu memiliki file GTA San Andreas Clean.</p>
+            </div>
+            <div class="p-6 text-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-16 h-16 bg-white/5 border border-white/10 rounded-full flex items-center justify-center mx-auto mb-6 text-[#FF007A] text-2xl font-bold">2</div>
+                <h4 class="font-bold mb-2">Install SA-MP</h4>
+                <p class="text-sm text-gray-400">Download dan install SA-MP Client versi 0.3.7-R4.</p>
+            </div>
+            <div class="p-6 text-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-16 h-16 bg-white/5 border border-white/10 rounded-full flex items-center justify-center mx-auto mb-6 text-[#FF007A] text-2xl font-bold">3</div>
+                <h4 class="font-bold mb-2">Connect Server</h4>
+                <p class="text-sm text-gray-400">Masukkan IP: <b>play.jartern-rp.com</b> di favorit client.</p>
+            </div>
+            <div class="p-6 text-center" data-aos="fade-up" data-aos-delay="300">
+                <div class="w-16 h-16 bg-white/5 border border-white/10 rounded-full flex items-center justify-center mx-auto mb-6 text-[#FF007A] text-2xl font-bold">4</div>
+                <h4 class="font-bold mb-2">Join & Register</h4>
+                <p class="text-sm text-gray-400">Masuk ke server, register akun, dan buat karaktermu!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Rules & Roleplay -->
+    <section class="py-20 px-6 md:px-20 bg-white/5 border-y border-white/10">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-black font-heading mb-10 text-center uppercase tracking-widest"><i class="fas fa-gavel text-[#FF007A] mr-4"></i>Server Rules</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="flex gap-4">
+                    <i class="fas fa-exclamation-triangle text-[#FF007A] mt-1"></i>
+                    <div>
+                        <h5 class="font-bold uppercase text-pink-400">Serious Roleplay</h5>
+                        <p class="text-sm text-gray-400">Utamakan kualitas peran (IC) dan hargai setiap skenario yang sedang berjalan.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <i class="fas fa-ban text-[#FF007A] mt-1"></i>
+                    <div>
+                        <h5 class="font-bold uppercase text-pink-400">No Cheat / No Toxic</h5>
+                        <p class="text-sm text-gray-400">Kami memiliki toleransi nol terhadap penggunaan program ilegal dan toxic behavior.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <i class="fas fa-users text-[#FF007A] mt-1"></i>
+                    <div>
+                        <h5 class="font-bold uppercase text-pink-400">Ikuti Arahan Admin</h5>
+                        <p class="text-sm text-gray-400">Keputusan admin adalah mutlak. Gunakan fitur report jika menemui kendala.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <i class="fas fa-book text-[#FF007A] mt-1"></i>
+                    <div>
+                        <h5 class="font-bold uppercase text-pink-400">Pahami Istilah RP</h5>
+                        <p class="text-sm text-gray-400">Wajib memahami Meta Gaming, Power Gaming, Deathmatching, dll sebelum bermain.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Footer -->
+    <footer class="py-12 px-6 md:px-20 border-t border-white/10">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-center md:text-left">
+                <div class="text-3xl font-black font-heading mb-2">JARTERN<span class="text-[#FF007A]">RP</span></div>
+                <p class="text-gray-500 text-sm max-w-xs text-center mx-auto md:mx-0">Menyediakan platform roleplay berkualitas tinggi untuk seluruh pecinta SA-MP Indonesia.</p>
+            </div>
+            <div class="flex space-x-6 text-2xl">
+                <a href="#" class="hover:text-[#FF007A] transition"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="hover:text-[#FF007A] transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-[#FF007A] transition"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="hover:text-[#FF007A] transition"><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+        <div class="mt-12 text-center text-gray-600 text-xs uppercase tracking-widest font-bold">
+            Copyright &copy; 2024 JARTERN RP. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+    </script>
+</body>
+</html>
