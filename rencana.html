@@ -1,0 +1,278 @@
+<!DOCTYPE html><html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050816">
+<title>Rencana Misi | INDOSPACE</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:Arial,sans-serif;
+  background:#050816;color:#fff;
+}
+nav{
+  position:sticky;top:0;z-index:10;
+  padding:20px 7%;display:flex;
+  justify-content:space-between;align-items:center;
+  background:#080d20ed;backdrop-filter:blur(12px);
+  border-bottom:1px solid #ffffff18;
+}
+.logo{font-weight:900;letter-spacing:2px}
+.logo span{color:#ff3434}
+nav a{color:#ddd;text-decoration:none;font-size:13px}
+.hero{
+  text-align:center;padding:100px 20px 80px;
+  background:linear-gradient(#05081666,#050816),
+  url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=1600') center/cover;
+}
+.tag{
+  display:inline-block;padding:10px 15px;
+  border:1px solid #ff454566;border-radius:30px;
+  color:#ff555d;font-size:11px;letter-spacing:2px;
+  margin-bottom:25px;
+}
+h1{font-size:clamp(38px,8vw,75px);line-height:1.05}
+h1 span{color:#ff414b}
+.hero p{
+  max-width:650px;margin:22px auto 0;
+  color:#b5bfd2;line-height:1.8;font-size:14px;
+}
+section{padding:75px 7%}
+.title{text-align:center;margin-bottom:40px}
+.title small{color:#ff4a54;letter-spacing:3px}
+.title h2{font-size:clamp(27px,5vw,42px);margin-top:12px}
+.title p{color:#9da8bd;margin-top:12px;line-height:1.7}
+.notice{
+  max-width:900px;margin:0 auto 50px;
+  padding:18px 20px;border:1px solid #f2b94b55;
+  background:#f2b94b0d;border-radius:10px;
+  color:#e7d4a8;font-size:13px;line-height:1.8;
+}
+.grid{
+  max-width:1050px;margin:auto;
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+.card{
+  background:#0c1329;border:1px solid #ffffff17;
+  border-radius:12px;padding:25px;
+}
+.card .num{font-size:12px;color:#ff5059;letter-spacing:2px}
+.card h3{font-size:20px;margin:14px 0}
+.card p{font-size:13px;color:#aab4c8;line-height:1.8}
+.status{
+  display:inline-block;margin-top:15px;
+  border-radius:20px;padding:7px 10px;
+  font-size:10px;letter-spacing:1px;
+  color:#ffd47b;background:#ffd47b13;
+  border:1px solid #ffd47b33;
+}
+.people{
+  max-width:1000px;margin:auto;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+}
+.person{
+  text-align:center;padding:25px 15px;
+  background:#0c1329;border:1px solid #ffffff17;
+  border-radius:12px;
+}
+.avatar{
+  width:90px;height:90px;border-radius:50%;
+  display:grid;place-items:center;
+  margin:0 auto 18px;
+  background:linear-gradient(145deg,#202e50,#10172b);
+  border:1px solid #ffffff25;font-size:35px;
+}
+.person h3{font-size:17px;margin-bottom:9px}
+.person p{font-size:12px;line-height:1.7;color:#aab4c8}
+.person .status{margin-top:13px}
+.timeline{max-width:750px;margin:auto}
+.event{
+  display:flex;gap:18px;position:relative;
+  padding-bottom:30px;
+}
+.event:not(:last-child):before{
+  content:"";position:absolute;left:16px;top:34px;
+  height:calc(100% - 28px);width:1px;
+  background:#ff414b55;
+}
+.dot{
+  z-index:1;flex-shrink:0;
+  width:34px;height:34px;border-radius:50%;
+  display:grid;place-items:center;
+  background:#121a30;border:1px solid #ff414b;
+  color:#ff555d;font-size:12px;
+}
+.event h3{font-size:16px;margin:5px 0 8px}
+.event p{font-size:13px;color:#aab4c8;line-height:1.8}
+.cta{
+  text-align:center;padding:80px 20px;
+  background:linear-gradient(#05081688,#050816ee),
+  url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1400') center/cover;
+}
+.cta h2{font-size:clamp(28px,5vw,48px)}
+.cta p{color:#b5bfd2;line-height:1.8;margin:15px auto 25px}
+.btn{
+  display:inline-block;background:#ed303b;
+  color:white;text-decoration:none;padding:14px 23px;
+  border-radius:5px;font-weight:bold;
+  font-size:12px;letter-spacing:1px;
+}
+footer{
+  padding:28px 7%;text-align:center;
+  color:#7f8aa1;font-size:11px;line-height:2;
+  border-top:1px solid #ffffff18;
+}
+@media(max-width:700px){
+  .grid,.people{grid-template-columns:1fr}
+  section{padding:60px 6%}
+  .hero{padding:80px 20px 65px}
+}
+</style>
+</head>
+<body><nav>
+  <div class="logo">INDO<span>SPACE</span></div>
+  <a href="index.html">← KEMBALI KE BERANDA</a>
+</nav><header class="hero">
+  <div class="tag">INDONESIA SPACE PROGRAM</div>
+  <h1>RENCANA<br>MENUJU <span>BULAN</span></h1>
+  <p>
+    Merancang perjalanan, mempersiapkan astronaut,
+    dan mengembangkan teknologi untuk menjelajahi
+    luar angkasa.
+  </p>
+</header><section>
+  <div class="notice">
+    <strong>INFORMASI:</strong> Halaman ini merupakan konsep
+    simulasi rencana misi INDOSPACE. Belum ada pengumuman
+    resmi bahwa Indonesia akan mengirim astronaut ke Bulan
+    pada 9 Oktober 2026. Nama astronaut, tanggal seleksi,
+    dan jadwal di bawah bukan jadwal resmi.
+  </div>  <div class="title">
+    <small>MISSION PLAN</small>
+    <h2>Rencana Pelaksanaan</h2>
+    <p>Gambaran tahapan yang dapat dilakukan dalam program eksplorasi antariksa.</p>
+  </div>  <div class="grid">
+    <div class="card">
+      <div class="num">PHASE 01</div>
+      <h3>Pengumuman Konsep</h3>
+      <p>9 Oktober 2026</p>
+      <p>Pengenalan konsep misi, tujuan eksplorasi, dan rencana pengembangan program antariksa.</p>
+      <span class="status">TANGGAL KONSEP</span>
+    </div>
+    <div class="card">
+      <div class="num">PHASE 02</div>
+      <h3>Seleksi Calon Astronaut</h3>
+      <p>2027 — Usulan simulasi</p>
+      <p>Seleksi kandidat berdasarkan kesehatan, kemampuan akademik, psikologi, dan kebugaran fisik.</p>
+      <span class="status">BELUM DIJADWALKAN</span>
+    </div>
+    <div class="card">
+      <div class="num">PHASE 03</div>
+      <h3>Pelatihan Astronaut</h3>
+      <p>2028 — Usulan simulasi</p>
+      <p>Pelatihan sains antariksa, simulasi gravitasi mikro, komunikasi, dan prosedur keselamatan.</p>
+      <span class="status">BELUM DIJADWALKAN</span>
+    </div>
+    <div class="card">
+      <div class="num">PHASE 04</div>
+      <h3>Uji Coba Teknologi</h3>
+      <p>2029 — Usulan simulasi</p>
+      <p>Pengujian sistem wahana, peralatan pendukung kehidupan, navigasi, dan komunikasi.</p>
+      <span class="status">BELUM DIJADWALKAN</span>
+    </div>
+    <div class="card">
+      <div class="num">PHASE 05</div>
+      <h3>Persiapan Misi Bulan</h3>
+      <p>2030 dan seterusnya — Hipotetis</p>
+      <p>Evaluasi kesiapan kru, sistem peluncuran, kerja sama internasional, dan keselamatan misi.</p>
+      <span class="status">RENCANA HIPOTETIS</span>
+    </div>
+    <div class="card">
+      <div class="num">PHASE 06</div>
+      <h3>Eksplorasi Antariksa</h3>
+      <p>Menunggu kelayakan dan keputusan</p>
+      <p>Pelaksanaan misi hanya jika teknologi, pendanaan, kerja sama, dan seluruh persyaratan telah terpenuhi.</p>
+      <span class="status">BELUM DIKONFIRMASI</span>
+    </div>
+  </div>
+</section><section style="background:#080d20">
+  <div class="title">
+    <small>CREW CANDIDATES</small>
+    <h2>Siapa Astronautnya?</h2>
+    <p>Daftar kandidat akan diisi setelah ada pengumuman dan seleksi resmi.</p>
+  </div>  <div class="people">
+    <div class="person">
+      <div class="avatar">👨‍🚀</div>
+      <h3>Astronaut 01</h3>
+      <p>Nama belum diumumkan</p>
+      <span class="status">KANDIDAT BELUM ADA</span>
+    </div>
+    <div class="person">
+      <div class="avatar">👩‍🚀</div>
+      <h3>Astronaut 02</h3>
+      <p>Nama belum diumumkan</p>
+      <span class="status">KANDIDAT BELUM ADA</span>
+    </div>
+    <div class="person">
+      <div class="avatar">👨‍🚀</div>
+      <h3>Astronaut 03</h3>
+      <p>Nama belum diumumkan</p>
+      <span class="status">KANDIDAT BELUM ADA</span>
+    </div>
+  </div>
+</section><section>
+  <div class="title">
+    <small>MISSION JOURNEY</small>
+    <h2>Perjalanan Misi</h2>
+    <p>Urutan kegiatan dalam gambaran simulasi misi.</p>
+  </div>
+  <div class="timeline">
+    <div class="event">
+      <div class="dot">01</div>
+      <div>
+        <h3>Seleksi dan Pemeriksaan</h3>
+        <p>Pemeriksaan kesehatan, keterampilan, dan kesiapan calon kru.</p>
+      </div>
+    </div>
+    <div class="event">
+      <div class="dot">02</div>
+      <div>
+        <h3>Pelatihan Intensif</h3>
+        <p>Belajar mengoperasikan sistem wahana dan menghadapi situasi darurat.</p>
+      </div>
+    </div>
+    <div class="event">
+      <div class="dot">03</div>
+      <div>
+        <h3>Persiapan Peluncuran</h3>
+        <p>Pengecekan roket, wahana, pusat kendali, dan seluruh prosedur keselamatan.</p>
+      </div>
+    </div>
+    <div class="event">
+      <div class="dot">04</div>
+      <div>
+        <h3>Perjalanan Menuju Bulan</h3>
+        <p>Simulasi perjalanan dari Bumi menuju Bulan dengan pemantauan dari pusat kendali.</p>
+      </div>
+    </div>
+    <div class="event">
+      <div class="dot">05</div>
+      <div>
+        <h3>Penelitian dan Kepulangan</h3>
+        <p>Pelaksanaan penelitian sesuai misi, kemudian kembali ke Bumi dengan prosedur yang direncanakan.</p>
+      </div>
+    </div>
+  </div>
+</section><div class="cta">
+  <h2>MASA DEPAN DIMULAI DARI MIMPI</h2>
+  <p>Indonesia dan generasi masa depan, bersama menjelajahi ilmu pengetahuan.</p>
+  <a class="btn" href="index.html">KEMBALI KE BERANDA</a>
+</div><footer>
+  <strong>INDOSPACE</strong>
+  <p>INDONESIA TO THE MOON · 09 OKTOBER 2026</p>
+  <p>Konsep simulasi, bukan program atau jadwal resmi.</p>
+  <p>© 2026 INDOSPACE</p>
+</footer></body>
+</html>
