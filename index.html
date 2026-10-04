@@ -1,279 +1,314 @@
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE html><html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JARTERN RP - San Andreas Multiplayer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #050505;
-            color: #ffffff;
-            scroll-behavior: smooth;
-        }
-        .font-heading { font-family: 'Montserrat', sans-serif; }
-        
-        .neon-text {
-            text-shadow: 0 0 10px rgba(255, 0, 122, 0.7), 0 0 20px rgba(255, 0, 122, 0.5);
-        }
-        
-        .neon-border {
-            border: 1px solid rgba(255, 0, 122, 0.3);
-            box-shadow: 0 0 15px rgba(255, 0, 122, 0.1);
-        }
-
-        .neon-button {
-            background: #FF007A;
-            box-shadow: 0 0 15px rgba(255, 0, 122, 0.4);
-            transition: all 0.3s ease;
-        }
-        
-        .neon-button:hover {
-            box-shadow: 0 0 25px rgba(255, 0, 122, 0.7);
-            transform: translateY(-2px);
-        }
-
-        .glass {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .bg-hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(5,5,5,1)), url('https://images.unsplash.com/photo-1514565131-fce0801e5785?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .feature-card:hover {
-            border-color: #FF007A;
-            transform: translateY(-10px);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050816">
+<title>INDONESIA TO THE MOON | 09.10.2026</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:Arial,sans-serif;
+  background:#050816;
+  color:white;
+  overflow-x:hidden;
+}
+html{scroll-behavior:smooth}
+.hero{
+  min-height:100vh;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:100px 20px 50px;
+  overflow:hidden;
+  background:linear-gradient(180deg,rgba(2,5,20,.3),#050816 100%),
+  url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=1920') center/cover;
+}
+nav{
+  position:absolute;top:0;left:0;width:100%;
+  padding:22px 7%;
+  display:flex;justify-content:space-between;
+  align-items:center;z-index:5;
+  background:rgba(5,8,22,.45);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #ffffff16;
+}
+.logo{font-weight:900;letter-spacing:2px;font-size:17px}
+.logo span{color:#ff3434}
+nav a{color:#ddd;text-decoration:none;font-size:13px;margin-left:22px}
+nav a:hover{color:#ff4141}
+.flag{
+  display:inline-flex;align-items:center;gap:9px;
+  font-size:12px;letter-spacing:3px;
+  border:1px solid #ffffff30;padding:10px 16px;
+  border-radius:30px;background:#ffffff0c;
+  margin-bottom:28px;
+}
+.flag i{width:17px;height:11px;background:linear-gradient(red 50%,white 50%);display:inline-block}
+h1{
+  font-size:clamp(43px,9vw,100px);
+  font-weight:900;line-height:.95;
+  letter-spacing:-3px;
+  text-shadow:0 5px 35px #000;
+}
+h1 span{color:#ff3939}
+.subtitle{
+  max-width:650px;color:#c5c9d7;
+  font-size:16px;line-height:1.8;
+  margin:25px auto 30px;
+}
+.date{
+  font-size:15px;letter-spacing:5px;
+  color:#ff5555;font-weight:bold;
+  margin-bottom:22px;
+}
+.countdown{
+  display:flex;gap:12px;justify-content:center;
+  flex-wrap:wrap;margin:10px 0 30px;
+}
+.time{
+  width:90px;padding:17px 8px;
+  border:1px solid #ffffff24;
+  background:#10172cbf;border-radius:12px;
+  backdrop-filter:blur(10px);
+}
+.time strong{display:block;font-size:30px;color:white}
+.time small{font-size:10px;letter-spacing:2px;color:#aab2c8}
+.btn{
+  display:inline-block;padding:15px 26px;
+  background:#ed303b;color:white;
+  border-radius:5px;text-decoration:none;
+  font-weight:bold;font-size:12px;
+  letter-spacing:1.5px;
+  transition:.3s;
+}
+.btn:hover{background:#ff5961;transform:translateY(-3px)}
+.scroll{position:absolute;bottom:22px;color:#aab0c3;font-size:10px;letter-spacing:3px}
+section{padding:90px 7%}
+.section-title{text-align:center;margin-bottom:45px}
+.section-title small{color:#ff4545;letter-spacing:4px;font-size:11px}
+.section-title h2{font-size:clamp(30px,5vw,48px);margin-top:13px}
+.section-title p{color:#9ca6bd;margin-top:12px;line-height:1.7}
+.about{background:#080d20}
+.about-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:45px;align-items:center;max-width:1100px;margin:auto;
+}
+.about-img{
+  width:100%;height:350px;object-fit:cover;
+  border-radius:12px;border:1px solid #ffffff20;
+}
+.about-text h3{font-size:27px;margin-bottom:18px}
+.about-text p{color:#aeb6ca;line-height:1.9;font-size:14px;margin-bottom:15px}
+.cards{
+  max-width:1100px;margin:auto;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+.card{
+  padding:27px 23px;background:#0c1329;
+  border:1px solid #ffffff15;border-radius:12px;
+  transition:.3s;
+}
+.card:hover{transform:translateY(-5px);border-color:#ff414180}
+.card .number{font-size:12px;color:#ff4c55;letter-spacing:3px}
+.card h3{font-size:20px;margin:20px 0 12px}
+.card p{font-size:13px;line-height:1.8;color:#9da8c0}
+.icon{font-size:32px}
+.mission{background:linear-gradient(180deg,#080d20,#050816)}
+.timeline{max-width:750px;margin:auto}
+.step{
+  display:flex;gap:22px;padding-bottom:35px;
+  position:relative;
+}
+.step:not(:last-child):before{
+  content:"";position:absolute;left:17px;top:38px;
+  width:1px;height:calc(100% - 25px);
+  background:#ff3b4555;
+}
+.dot{
+  min-width:36px;height:36px;border-radius:50%;
+  border:1px solid #ff434c;color:#ff515b;
+  display:grid;place-items:center;background:#11172b;
+  font-size:12px;z-index:1;
+}
+.step h3{font-size:17px;margin:5px 0 8px}
+.step p{font-size:13px;color:#a4aec4;line-height:1.7}
+.banner{
+  text-align:center;padding:100px 20px;
+  background:linear-gradient(#05081699,#050816e8),
+  url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600') center/cover;
+}
+.banner h2{font-size:clamp(30px,6vw,60px);margin-bottom:20px}
+.banner p{color:#c4c9d7;line-height:1.8;margin-bottom:28px}
+footer{
+  padding:30px 7%;text-align:center;
+  border-top:1px solid #ffffff16;
+  color:#7e899f;font-size:11px;line-height:2;
+}
+footer strong{color:white;letter-spacing:2px}
+@media(max-width:700px){
+ nav{padding:18px 5%}
+ nav a{margin-left:10px;font-size:10px}
+ .logo{font-size:13px}
+ .about-grid{grid-template-columns:1fr;gap:25px}
+ .about-img{height:240px}
+ .cards{grid-template-columns:1fr}
+ section{padding:70px 6%}
+ h1{letter-spacing:-2px}
+ .subtitle{font-size:14px}
+ .time{width:72px;padding:13px 5px}
+ .time strong{font-size:24px}
+ .time small{font-size:8px}
+}
+</style>
 </head>
-<body>
+<body><header class="hero" id="home">
+  <nav>
+    <div class="logo">INDO<span>SPACE</span></div>
+    <div>
+      <a href="#home">HOME</a>
+      <a href="#about">MISI</a>
+      <a href="#timeline">JADWAL</a>
+    </div>
+  </nav>  <div class="flag"><i></i> REPUBLIK INDONESIA</div>
+  <div class="date">09 OKTOBER 2026</div>
+  <h1>INDONESIA<br>TO THE <span>MOON</span></h1>
+  <p class="subtitle">
+    Sebuah langkah menuju masa depan. Dari Bumi Nusantara
+    menuju luar angkasa, membawa mimpi dan harapan
+    Indonesia untuk menjelajahi Bulan.
+  </p>  <div class="countdown" id="countdown">
+    <div class="time"><strong id="days">00</strong><small>HARI</small></div>
+    <div class="time"><strong id="hours">00</strong><small>JAM</small></div>
+    <div class="time"><strong id="minutes">00</strong><small>MENIT</small></div>
+    <div class="time"><strong id="seconds">00</strong><small>DETIK</small></div>
+  </div><a class="btn" href="#about">JELAJAHI MISI   →</a>
 
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 glass py-4 px-6 md:px-20 flex justify-between items-center">
-        <div class="text-2xl font-black font-heading tracking-tighter">
-            JARTERN<span class="text-[#FF007A]">RP</span>
-        </div>
-        <div class="hidden md:flex space-x-8 font-semibold text-sm uppercase tracking-widest">
-            <a href="#home" class="hover:text-[#FF007A] transition">Home</a>
-            <a href="#about" class="hover:text-[#FF007A] transition">Tentang</a>
-            <a href="#features" class="hover:text-[#FF007A] transition">Fitur</a>
-            <a href="#join" class="hover:text-[#FF007A] transition">Cara Join</a>
-        </div>
-        <a href="#join" class="neon-button px-6 py-2 rounded-full font-bold text-sm">MAIN SEKARANG</a>
-    </nav>
+  <div class="scroll">SCROLL UNTUK MENJELAJAHI ↓</div>
+</header><section class="about" id="about">
+  <div class="section-title">
+    <small>THE VISION</small>
+    <h2>Menuju Masa Depan</h2>
+    <p>Mimpi besar untuk menjelajahi luar angkasa.</p>
+  </div>
+  <div class="about-grid">
+    <img class="about-img"
+      src="https://images.unsplash.com/photo-1614728263952-84ea256f9679?w=1000"
+      alt="Bulan dilihat dari luar angkasa">
+    <div class="about-text">
+      <h3>Indonesia Menatap Bulan</h3>
+      <p>
+        Bulan menjadi simbol penjelajahan, ilmu pengetahuan,
+        dan keberanian manusia untuk melangkah lebih jauh.
+        Indonesia memiliki mimpi untuk ikut berkontribusi
+        dalam eksplorasi antariksa.
+      </p>
+      <p>
+        Website ini merupakan konsep visual simulasi misi
+        luar angkasa Indonesia dengan tanggal peringatan
+        09 Oktober 2026.
+      </p>
+      <a class="btn" href="#timeline">LIHAT TAHAPAN MISI</a>
+    </div>
+  </div>
+</section><section>
+  <div class="section-title">
+    <small>MISSION OBJECTIVES</small>
+    <h2>Tujuan Misi</h2>
+    <p>Langkah besar untuk mengenal alam semesta.</p>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <div class="icon">🚀</div>
+      <div class="number">01 / EXPLORATION</div>
+      <h3>Penjelajahan</h3>
+      <p>Mempelajari perjalanan menuju Bulan dan teknologi yang diperlukan untuk eksplorasi antariksa.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🌕</div>
+      <div class="number">02 / DISCOVERY</div>
+      <h3>Penemuan</h3>
+      <p>Mengenal permukaan Bulan, lingkungan antariksa, serta potensi penelitian ilmiah.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🇮🇩</div>
+      <div class="number">03 / INSPIRATION</div>
+      <h3>Menginspirasi Bangsa</h3>
+      <p>Mendorong generasi muda Indonesia untuk belajar sains, teknologi, dan astronomi.</p>
+    </div>
+  </div>
+</section><section class="mission" id="timeline">
+  <div class="section-title">
+    <small>MISSION TIMELINE</small>
+    <h2>Tahapan Misi</h2>
+    <p>Gambaran tahapan dalam konsep simulasi perjalanan antariksa.</p>
+  </div>
+  <div class="timeline">
+    <div class="step">
+      <div class="dot">01</div>
+      <div>
+        <h3>Persiapan Misi</h3>
+        <p>Perencanaan, pengembangan teknologi, pemeriksaan sistem, dan persiapan kru.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="dot">02</div>
+      <div>
+        <h3>Peluncuran Roket</h3>
+        <p>Simulasi peluncuran wahana antariksa dari Bumi menuju orbit.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="dot">03</div>
+      <div>
+        <h3>Perjalanan ke Bulan</h3>
+        <p>Perjalanan melintasi ruang angkasa dengan pemantauan sistem wahana.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="dot">04</div>
+      <div>
+        <h3>Eksplorasi Bulan</h3>
+        <p>Konsep penelitian dan pengamatan permukaan Bulan dalam simulasi misi.</p>
+      </div>
+    </div>
+  </div>
+</section><div class="banner">
+  <h2>ONE NATION.<br><span style="color:#ff424b">ONE DREAM.</span></h2>
+  <p>Dari Indonesia untuk masa depan umat manusia.<br>
+  Langit bukanlah batas dari sebuah mimpi.</p>
+  <a class="btn" href="#home">KEMBALI KE ATAS ↑</a>
+</div><footer>
+  <strong>INDOSPACE</strong>
+  <p>INDONESIA TO THE MOON · 09 OKTOBER 2026</p>
+  <p>Website konsep simulasi. Bukan pengumuman resmi misi antariksa.</p>
+  <p>© 2026 INDOSPACE. ALL RIGHTS RESERVED.</p>
+</footer><script>
+const target = new Date("2026-10-09T00:00:00+07:00").getTime();
 
-    <!-- 1. Hero Section -->
-    <section id="home" class="bg-hero min-h-screen flex items-center justify-center text-center px-4">
-        <div data-aos="fade-up" data-aos-duration="1000">
-            <h1 class="text-6xl md:text-8xl font-black font-heading mb-4 neon-text">JARTERN ROLEPLAY</h1>
-            <p class="text-lg md:text-2xl text-gray-300 max-w-2xl mx-auto mb-8 font-light">
-                Rasakan Roleplay Paling <span class="text-white font-bold italic">Realistis</span> di San Andreas Multiplayer.
-            </p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="#" class="neon-button px-10 py-4 rounded-lg font-bold flex items-center justify-center">
-                    <i class="fas fa-play mr-2"></i> Join Server
-                </a>
-                <a href="#" class="bg-white/10 hover:bg-white/20 backdrop-blur-md px-10 py-4 rounded-lg font-bold border border-white/20 transition flex items-center justify-center">
-                    <i class="fab fa-discord mr-2 text-blue-400"></i> Discord Community
-                </a>
-            </div>
-        </div>
-    </section>
+function updateCountdown(){
+  const now = Date.now();
+  let diff = target - now;
 
-    <!-- 2. Tentang Server -->
-    <section id="about" class="py-20 px-6 md:px-20 bg-[#050505]">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div data-aos="fade-right">
-                <h2 class="text-4xl font-black font-heading mb-6 border-l-8 border-[#FF007A] pl-6 uppercase">Mengapa JARTERN RP?</h2>
-                <p class="text-gray-400 leading-relaxed text-lg mb-6">
-                    JARTERN RP adalah komunitas San Andreas Multiplayer yang berfokus pada kualitas roleplay yang mendalam dan ekonomi yang seimbang. Kami menyediakan platform bagi pemain yang mencari pengalaman simulasi kehidupan nyata di Los Santos.
-                </p>
-                <ul class="space-y-4">
-                    <li class="flex items-center text-white font-semibold">
-                        <i class="fas fa-check-circle text-[#FF007A] mr-3"></i> Roleplay Serius & Realistis
-                    </li>
-                    <li class="flex items-center text-white font-semibold">
-                        <i class="fas fa-check-circle text-[#FF007A] mr-3"></i> Admin Aktif & Profesional 24/7
-                    </li>
-                    <li class="flex items-center text-white font-semibold">
-                        <i class="fas fa-check-circle text-[#FF007A] mr-3"></i> Komunitas Ramah & Solid
-                    </li>
-                </ul>
-            </div>
-            <div class="relative" data-aos="fade-left">
-                <div class="absolute -inset-4 bg-[#FF007A] opacity-20 blur-xl rounded-full"></div>
-                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="SAMP" class="relative rounded-2xl border border-white/10 shadow-2xl">
-            </div>
-        </div>
-    </section>
+  if(diff <= 0){
+    document.getElementById("countdown").innerHTML =
+      "<div class='time' style='width:auto'><strong style='font-size:20px'>HARI YANG DINANTIKAN!</strong></div>";
+    return;
+  }
 
-    <!-- 3. Fitur Unggulan -->
-    <section id="features" class="py-20 px-6 md:px-20 bg-[#0A0A0A]">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-black font-heading uppercase mb-2">Fitur Unggulan</h2>
-            <div class="h-1 w-20 bg-[#FF007A] mx-auto"></div>
-        </div>
+  const days = Math.floor(diff / (1000*60*60*24));
+  const hours = Math.floor((diff / (1000*60*60)) % 24);
+  const minutes = Math.floor((diff / (1000*60)) % 60);
+  const seconds = Math.floor((diff / 1000) % 60);
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Feature Cards -->
-            <div class="glass p-8 rounded-2xl feature-card transition-all duration-300 border border-white/5" data-aos="zoom-in">
-                <i class="fas fa-shield-alt text-4xl text-[#FF007A] mb-6"></i>
-                <h3 class="text-xl font-bold mb-3">Police & Law System</h3>
-                <p class="text-sm text-gray-400">Sistem hukum yang kompleks dengan departemen kepolisian yang terorganisir.</p>
-            </div>
-            <div class="glass p-8 rounded-2xl feature-card transition-all duration-300 border border-white/5" data-aos="zoom-in" data-aos-delay="100">
-                <i class="fas fa-heartbeat text-4xl text-[#FF007A] mb-6"></i>
-                <h3 class="text-xl font-bold mb-3">Medical & Emergency</h3>
-                <p class="text-sm text-gray-400">Tim medis sigap dengan sistem injury yang detail dan realistis.</p>
-            </div>
-            <div class="glass p-8 rounded-2xl feature-card transition-all duration-300 border border-white/5" data-aos="zoom-in" data-aos-delay="200">
-                <i class="fas fa-briefcase text-4xl text-[#FF007A] mb-6"></i>
-                <h3 class="text-xl font-bold mb-3">Job & Business</h3>
-                <p class="text-sm text-gray-400">Bekerja sebagai kurir, supir bus, atau bangun perusahaan impianmu sendiri.</p>
-            </div>
-            <div class="glass p-8 rounded-2xl feature-card transition-all duration-300 border border-white/5" data-aos="zoom-in">
-                <i class="fas fa-home text-4xl text-[#FF007A] mb-6"></i>
-                <h3 class="text-xl font-bold mb-3">Property & Housing</h3>
-                <p class="text-sm text-gray-400">Beli rumah, apartemen, atau gudang dengan sistem furnitur kustom.</p>
-            </div>
-            <div class="glass p-8 rounded-2xl feature-card transition-all duration-300 border border-white/5" data-aos="zoom-in" data-aos-delay="100">
-                <i class="fas fa-car text-4xl text-[#FF007A] mb-6"></i>
-                <h3 class="text-xl font-bold mb-3">Custom Vehicle</h3>
-                <p class="text-sm text-gray-400">Modifikasi kendaraanmu dengan sistem tuning dan handling yang unik.</p>
-            </div>
-            <div class="glass p-8 rounded-2xl feature-card transition-all duration-300 border border-white/5" data-aos="zoom-in" data-aos-delay="200">
-                <i class="fas fa-user-shield text-4xl text-[#FF007A] mb-6"></i>
-                <h3 class="text-xl font-bold mb-3">Anti-Cheat & Fair Play</h3>
-                <p class="text-sm text-gray-400">Sistem keamanan terbaru untuk menjaga kenyamanan bermain tanpa cheater.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. Statistik Server -->
-    <section class="py-16 bg-[#FF007A]">
-        <div class="px-6 md:px-20 grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
-            <div data-aos="fade-up">
-                <div class="text-4xl font-black font-heading">150+</div>
-                <div class="text-sm uppercase tracking-tighter opacity-80 font-bold">Player Online</div>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="100">
-                <div class="text-4xl font-black font-heading">5,000+</div>
-                <div class="text-sm uppercase tracking-tighter opacity-80 font-bold">Registered Player</div>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="200">
-                <div class="text-4xl font-black font-heading">12</div>
-                <div class="text-sm uppercase tracking-tighter opacity-80 font-bold">Total Factions</div>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="300">
-                <div class="text-4xl font-black font-heading">99.9%</div>
-                <div class="text-sm uppercase tracking-tighter opacity-80 font-bold">Uptime Server</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. Cara Bergabung -->
-    <section id="join" class="py-20 px-6 md:px-20">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-black font-heading uppercase mb-2">Cara Bergabung</h2>
-            <p class="text-gray-400">Ikuti langkah sederhana berikut untuk mulai bermain</p>
-        </div>
-
-        <div class="grid md:grid-cols-4 gap-6">
-            <div class="p-6 text-center" data-aos="fade-up">
-                <div class="w-16 h-16 bg-white/5 border border-white/10 rounded-full flex items-center justify-center mx-auto mb-6 text-[#FF007A] text-2xl font-bold">1</div>
-                <h4 class="font-bold mb-2">Download GTA SA</h4>
-                <p class="text-sm text-gray-400">Pastikan kamu memiliki file GTA San Andreas Clean.</p>
-            </div>
-            <div class="p-6 text-center" data-aos="fade-up" data-aos-delay="100">
-                <div class="w-16 h-16 bg-white/5 border border-white/10 rounded-full flex items-center justify-center mx-auto mb-6 text-[#FF007A] text-2xl font-bold">2</div>
-                <h4 class="font-bold mb-2">Install SA-MP</h4>
-                <p class="text-sm text-gray-400">Download dan install SA-MP Client versi 0.3.7-R4.</p>
-            </div>
-            <div class="p-6 text-center" data-aos="fade-up" data-aos-delay="200">
-                <div class="w-16 h-16 bg-white/5 border border-white/10 rounded-full flex items-center justify-center mx-auto mb-6 text-[#FF007A] text-2xl font-bold">3</div>
-                <h4 class="font-bold mb-2">Connect Server</h4>
-                <p class="text-sm text-gray-400">Masukkan IP: <b>play.jartern-rp.com</b> di favorit client.</p>
-            </div>
-            <div class="p-6 text-center" data-aos="fade-up" data-aos-delay="300">
-                <div class="w-16 h-16 bg-white/5 border border-white/10 rounded-full flex items-center justify-center mx-auto mb-6 text-[#FF007A] text-2xl font-bold">4</div>
-                <h4 class="font-bold mb-2">Join & Register</h4>
-                <p class="text-sm text-gray-400">Masuk ke server, register akun, dan buat karaktermu!</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. Rules & Roleplay -->
-    <section class="py-20 px-6 md:px-20 bg-white/5 border-y border-white/10">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-black font-heading mb-10 text-center uppercase tracking-widest"><i class="fas fa-gavel text-[#FF007A] mr-4"></i>Server Rules</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="flex gap-4">
-                    <i class="fas fa-exclamation-triangle text-[#FF007A] mt-1"></i>
-                    <div>
-                        <h5 class="font-bold uppercase text-pink-400">Serious Roleplay</h5>
-                        <p class="text-sm text-gray-400">Utamakan kualitas peran (IC) dan hargai setiap skenario yang sedang berjalan.</p>
-                    </div>
-                </div>
-                <div class="flex gap-4">
-                    <i class="fas fa-ban text-[#FF007A] mt-1"></i>
-                    <div>
-                        <h5 class="font-bold uppercase text-pink-400">No Cheat / No Toxic</h5>
-                        <p class="text-sm text-gray-400">Kami memiliki toleransi nol terhadap penggunaan program ilegal dan toxic behavior.</p>
-                    </div>
-                </div>
-                <div class="flex gap-4">
-                    <i class="fas fa-users text-[#FF007A] mt-1"></i>
-                    <div>
-                        <h5 class="font-bold uppercase text-pink-400">Ikuti Arahan Admin</h5>
-                        <p class="text-sm text-gray-400">Keputusan admin adalah mutlak. Gunakan fitur report jika menemui kendala.</p>
-                    </div>
-                </div>
-                <div class="flex gap-4">
-                    <i class="fas fa-book text-[#FF007A] mt-1"></i>
-                    <div>
-                        <h5 class="font-bold uppercase text-pink-400">Pahami Istilah RP</h5>
-                        <p class="text-sm text-gray-400">Wajib memahami Meta Gaming, Power Gaming, Deathmatching, dll sebelum bermain.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 7. Footer -->
-    <footer class="py-12 px-6 md:px-20 border-t border-white/10">
-        <div class="flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="text-center md:text-left">
-                <div class="text-3xl font-black font-heading mb-2">JARTERN<span class="text-[#FF007A]">RP</span></div>
-                <p class="text-gray-500 text-sm max-w-xs text-center mx-auto md:mx-0">Menyediakan platform roleplay berkualitas tinggi untuk seluruh pecinta SA-MP Indonesia.</p>
-            </div>
-            <div class="flex space-x-6 text-2xl">
-                <a href="#" class="hover:text-[#FF007A] transition"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="hover:text-[#FF007A] transition"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="hover:text-[#FF007A] transition"><i class="fab fa-youtube"></i></a>
-                <a href="#" class="hover:text-[#FF007A] transition"><i class="fab fa-discord"></i></a>
-            </div>
-        </div>
-        <div class="mt-12 text-center text-gray-600 text-xs uppercase tracking-widest font-bold">
-            Copyright &copy; 2024 JARTERN RP. All Rights Reserved.
-        </div>
-    </footer>
-
-    <script>
-        AOS.init({
-            duration: 800,
-            once: true,
-        });
-    </script>
-</body>
+  document.getElementById("days").textContent = String(days).padStart(2,"0");
+  document.getElementById("hours").textContent = String(hours).padStart(2,"0");
+  document.getElementById("minutes").textContent = String(minutes).padStart(2,"0");
+  document.getElementById("seconds").textContent = String(seconds).padStart(2,"0");
+}
+updateCountdown();
+setInterval(updateCountdown,1000);
+</script></body>
 </html>
